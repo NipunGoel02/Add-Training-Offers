@@ -2,11 +2,17 @@ import { useState, useEffect } from 'react'
 import { useFormContext } from 'react-hook-form'
 import { Document, Page, pdfjs } from 'react-pdf'
 
-// ✅ This sets the worker source to a CDN version (safe & stable)
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
+// ✅ Set worker source (public folder)
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js'
+
 
 const Step3UploadMaterials = () => {
-  const { register, watch, formState: { errors } } = useFormContext()
+  const {
+    register,
+    watch,
+    formState: { errors },
+  } = useFormContext()
+
   const file = watch('file')
   const [numPages, setNumPages] = useState(null)
 
