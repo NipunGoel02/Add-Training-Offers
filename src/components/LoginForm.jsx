@@ -10,7 +10,7 @@ const LoginForm = ({ onLogin }) => {
     e.preventDefault()
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password })
+      const response = await axios.post('https://training-backend-re06.onrender.com/api/auth/login', { email, password })
       const { token } = response.data
       localStorage.setItem('token', token)
       alert('Login successful')
