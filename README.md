@@ -10,6 +10,13 @@
  
 This project was built as part of an internship assignment. It enables HR administrators to create and manage training offers efficiently.
 
+## Login Credentials
+Login Credentials (for demo purpose):
+Email: admin@example.com
+
+Password: password123
+
+
 ## 📚 Tech Stack
 
 - **Frontend**: ReactJS, Tailwind CSS, React Hook Form, React-PDF
