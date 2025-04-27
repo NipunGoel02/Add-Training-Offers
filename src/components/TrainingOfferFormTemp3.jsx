@@ -45,7 +45,7 @@ const TrainingOfferFormTemp3 = ({ onUnauthorized }) => {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/categories')
+    axios.get('https://training-backend-re06.onrender.com/api/categories')
       .then((res) => {
         if (Array.isArray(res.data)) {
           setCategories(res.data)
@@ -80,7 +80,7 @@ const TrainingOfferFormTemp3 = ({ onUnauthorized }) => {
 
       const token = localStorage.getItem('token')
 
-      await axios.post('http://localhost:5000/api/training-offers', formData, {
+      await axios.post('https://training-backend-re06.onrender.com/api/training-offers', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: token ? `Bearer ${token}` : '',
